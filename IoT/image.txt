@@ -1,0 +1,3 @@
+libcamera-jpeg -o Desktop/img123.jpg
+
+libcamera-vid -t 10000 -o Desktop/video1.h264
