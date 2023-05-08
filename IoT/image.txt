@@ -1,3 +1,7 @@
 libcamera-jpeg -o Desktop/img123.jpg
 
 libcamera-vid -t 10000 -o Desktop/video1.h264
+
+raspistill -o image.jpg
+
+raspivid -o video.mp4 -t 10000
