@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Set the random seed for reproducibility
+np.random.seed(42)
+
+# Generate random data
+num_samples = 100
+num_features = 2
+data = np.random.randn(num_samples, num_features)
+
+kmeans = KMeans(n_clusters=num_features, n_init="auto")
+kmeans.fit(data)
+
+labels = kmeans.labels_
+centroids = kmeans.cluster_centers_
+
+# Print the generated data
+plt.scatter(data[:, 0], data[:, 1], c=labels)

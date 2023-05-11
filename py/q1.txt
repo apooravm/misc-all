@@ -1,0 +1,24 @@
+Splitting Horizontally: df.iloc[:df.shape[0]-0]
+Splitting Vertically: df.loc[]
+delete Row: df.drop(1)
+df = df.rename(columns={'B': "MRBRUH"})
+df.transpose()
+df.plot()
+
+df1 = df[['A', 'B']]
+df2 = df['C']
+df1.join(df2, how="right")
+
+
+# Create a DataFrame
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+# Set an existing column as the index
+df_with_custom_index = df.set_index('A')
+# Print the DataFrame with custom index
+print(df_with_custom_index)
+# Check for duplicate rows
+is_duplicate = df.duplicated()
+
+# Print the boolean Series indicating duplicate rows
+print(is_duplicate)
+df[~is_duplicate]

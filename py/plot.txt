@@ -1,0 +1,46 @@
+sns.boxplot(x=df['Price']);
+
+Q1 = df.quantile(0.25, numeric_only=True)
+Q3 = df.quantile(0.75, numeric_only=True)
+IQR = Q3 - Q1
+IQR
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.scatter(df['HP'], df['Price'])
+ax.set_xlabel('HP')
+ax.set_ylabel('Price')
+plt.show()
+_____________________________
+c = df.corr()
+sns.heatmap(c, cmap="BrBG", annot=False)
+c
+HEATMAP
+____________________________
+# Generate random data
+data = [1, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5]
+HISTOGRAM
+
+# Plot histogram using Seaborn
+sns.distplot(data, kde=False, bins=5)
+_______________________________
+# Display the plot
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Histogram')
+plt.show()
+
+import matplotlib.pyplot as plt
+# Generate random data
+data = [30, 20, 15, 35]
+# Labels for the pie chart
+labels = ['Category 1', 'Category 2', 'Category 3', 'Category 4']
+# Create a pie chart
+plt.pie(data, autopct='%1.1f%%')
+# Set aspect ratio to be equal so that pie is drawn as a circle
+plt.axis('equal')
+# Set a title for the pie chart
+plt.title('Pie Chart')
+# Display the pie chart
+plt.show()
+
+"""
